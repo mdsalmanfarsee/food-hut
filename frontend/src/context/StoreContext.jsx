@@ -9,10 +9,8 @@ export const StoreContextProvider = (props) => {
 
     const [cartItems, setCartItems] = useState({});
     const [food_list, setFood_list] = useState([]);
-    // const url = "http://localhost:4000"
-    //const url = "https://foodhut-backend-rbo7.onrender.com"
-    //const url="https://food-app-pi-six.vercel.app"
-    const url = "http://localhost:5175";
+    //const url = "http://localhost:5175";
+    const url = "https://food-hut-gules.vercel.app";
     const [token, setToken] = useState("");
 
     const addToCart = async (itemId) => {

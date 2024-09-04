@@ -12,7 +12,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   //const url = 'https://foodhut-backend-rbo7.onrender.com'
-  const url = 'http://localhost:5175';
+  //const url = 'http://localhost:5175';
+  const url = "https://food-hut-gules.vercel.app";
   return (
     <div>
       <ToastContainer />
