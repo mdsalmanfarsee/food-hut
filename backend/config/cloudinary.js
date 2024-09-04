@@ -1,6 +1,6 @@
 // cloudinaryConfig.js
 import cloudinary from 'cloudinary';
-import { CloudinaryStorage } from 'multer-storage-cloudinary';
+//import { CloudinaryStorage } from 'multer-storage-cloudinary';
 import "dotenv/config"
 
 cloudinary.v2.config({
@@ -9,12 +9,12 @@ cloudinary.v2.config({
     api_secret: process.env.api_secret,
 });
 
-const storage = new CloudinaryStorage({
-    cloudinary: cloudinary.v2,
-    params: {
-        folder: 'food-images',
-        allowedFormats: ['jpeg', 'png', 'jpg'],
-    },
-});
+// const storage = new CloudinaryStorage({
+//     cloudinary: cloudinary.v2,
+//     params: {
+//         folder: 'food-images',
+//         allowedFormats: ['jpeg', 'png', 'jpg'],
+//     },
+// });
 
-export { cloudinary, storage };
+export { cloudinary };
