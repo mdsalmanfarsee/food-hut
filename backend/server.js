@@ -13,13 +13,7 @@ const app = express();
 const PORT = process.env.PORT || 4000
 //add middlewire
 app.use(express.json())
-app.use(cors(
-    {
-        origin: ["http://localhost:5173","http://localhost:5174"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-));
+app.use(cors());
 /*
 {
     origin:["https://food-app-frontend-tau.vercel.app"],
@@ -48,9 +42,9 @@ app.listen(PORT, () => {
 })
 
 process.on('unhandledRejection', (reason, promise) => {
-  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+    console.error('Unhandled Rejection at:', promise, 'reason:', reason);
 });
 
 process.on('uncaughtException', (error) => {
-  console.error('Uncaught Exception thrown:', error);
+    console.error('Uncaught Exception thrown:', error);
 });

@@ -39,7 +39,7 @@ import path from "path";
 // Configure Multer storage
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, '/tmp');  // Files will be stored in 'uploads/' directory
+        cb(null, '/tmp');  // vercel directory
     },
     filename: (req, file, cb) => {
         cb(null, Date.now() + path.extname(file.originalname));  // Add a unique suffix to the file name
