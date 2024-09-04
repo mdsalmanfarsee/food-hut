@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 4000
 app.use(express.json())
 app.use(cors(
     {
-        origin: ["https://food-hut-admin.vercel.app", "https://food-app-frontend-tau.vercel.app"],
+        origin: ["https://food-hut-admin.vercel.app", "https://food-hut-frontend.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }
