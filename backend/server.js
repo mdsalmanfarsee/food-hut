@@ -46,3 +46,11 @@ app.listen(PORT, () => {
     console.log(`server is running on port http://localhost:${PORT}`);
 
 })
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+});
+
+process.on('uncaughtException', (error) => {
+  console.error('Uncaught Exception thrown:', error);
+});
