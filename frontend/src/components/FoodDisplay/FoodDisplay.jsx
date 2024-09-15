@@ -3,12 +3,16 @@ import './FoodDisplay.css'
 import { useContext } from 'react'
 import { StoreContext } from '../../context/StoreContext'
 import FoodItem from '../FoodItem/FoodItem'
+import Skeleton from '../../skeleton/Skeleton'
 
 
 
 
 const FoodDisplay = ({ category }) => {
     const { food_list } = useContext(StoreContext)
+    if (!food_list) {
+        return <Skeleton /> // Loading skeleton
+    }
     return (
         <div className='food-display' id='food-display'>
             <h2>
