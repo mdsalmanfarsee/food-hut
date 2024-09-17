@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './FoodDisplay.css'
 import { useContext } from 'react'
 import { StoreContext } from '../../context/StoreContext'
@@ -10,8 +10,8 @@ import Skeleton from '../../skeleton/Skeleton'
 
 const FoodDisplay = ({ category }) => {
     const { food_list } = useContext(StoreContext)
-    if (!food_list) {
-        return <Skeleton /> // Loading skeleton
+    if (!food_list || food_list.length === 0) {
+        return <Skeleton />
     }
     return (
         <div className='food-display' id='food-display'>
